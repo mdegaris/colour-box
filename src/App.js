@@ -4,16 +4,14 @@ import Box from "./Box";
 import Input from "./Input";
 
 function App() {
-  const [colour, setColour] = useState("grey");
+    const [colour, setColour] = useState("");
 
-  const handleColourChange = () => {};
-
-  return (
-    <div>
-      <Box colour={colour} />
-      <Input colour={colour} setColour={setColour} />
-    </div>
-  );
+    return (
+        <div>
+            <Box colour={colour} />
+            <Input colour={colour} setColour={setColour} />
+        </div>
+    );
 }
 
 export default App;
