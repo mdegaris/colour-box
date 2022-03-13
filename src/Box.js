@@ -1,18 +1,22 @@
+import colourNametoHex from "colornames";
 import "./base.css";
 import "./Box.css";
 
 const Box = ({ colour }) => {
-  const colourValue = colour ? colour : "white";
-  const colourText = colour ? colour : "Empty Value";
+    console.log(colourNametoHex(colour));
+    const colourValue = colourNametoHex(colour)
+        ? colourNametoHex(colour)
+        : "white";
 
-  return (
-    <section
-      className="box shadowed-border"
-      style={{ backgroundColor: colourValue }}
-    >
-      <span>{colourText}</span>
-    </section>
-  );
+    const colourText = colour ? colour : "Empty Value";
+
+    return (
+        <section
+            className='box shadowed-border'
+            style={{ backgroundColor: colourValue }}>
+            <span>{colourText}</span>
+        </section>
+    );
 };
 
 export default Box;
