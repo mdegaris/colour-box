@@ -1,13 +1,18 @@
+import "./base.css";
 import "./Box.css";
 
 const Box = ({ colour }) => {
-    console.log(colour);
+  const colourValue = colour ? colour : "white";
+  const colourText = colour ? colour : "Empty Value";
 
-    return (
-        <div className='box' style={{ backgroundColor: colour }}>
-            {colour ? colour : "Empty Value"}
-        </div>
-    );
+  return (
+    <section
+      className="box shadowed-border"
+      style={{ backgroundColor: colourValue }}
+    >
+      <span>{colourText}</span>
+    </section>
+  );
 };
 
 export default Box;
